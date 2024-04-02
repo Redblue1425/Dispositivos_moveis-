@@ -26,6 +26,7 @@ class App extends Component{
 
                 <Image source={{uri: 'coloca a url aqui'}} style = {{width: 300, height: 300}}/>
                 <Text>{curso}</Text>
+                <MinhaImagem largura = {300} altura = {300} nome = "imagem 1"/>    
             </View>
         );
     
@@ -34,4 +35,16 @@ class App extends Component{
 
 export default App;
 
+class MinhaImagem extends Component{
+    render(){
+
+        let img = 'url da imagem';
+        return(
+            <View>
+            <Image source={{uri: 'coloca a url aqui'}} style = {{width: this.props.largura, height: this.props.largura}}/>
+            <Text>{this.props.nome}</Text>
+            </View>
+        );
+    }
+}
 
